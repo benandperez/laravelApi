@@ -18,11 +18,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/ticketsApi', [App\Http\Controllers\TicketApiController::class, 'index']);
+Route::get('/ticketsApi/{id}', [App\Http\Controllers\TicketApiController::class, 'show']);
 Route::post('/ticketsApi', [App\Http\Controllers\TicketApiController::class, 'store']);
 Route::put('/ticketsApi/{id}', [App\Http\Controllers\TicketApiController::class, 'update']);
 Route::delete('/ticketsApi/{id}', [App\Http\Controllers\TicketApiController::class, 'destroy']);
 
 Route::get('/userClientsApi', [App\Http\Controllers\UserClientsApiController::class, 'index']);
+Route::get('/userClientsApi/{id}', [App\Http\Controllers\UserClientsApiController::class, 'show']);
 Route::post('/userClientsApi', [App\Http\Controllers\UserClientsApiController::class, 'store']);
 Route::put('/userClientsApi/{id}', [App\Http\Controllers\UserClientsApiController::class, 'update']);
 Route::delete('/userClientsApi/{id}', [App\Http\Controllers\UserClientsApiController::class, 'destroy']);

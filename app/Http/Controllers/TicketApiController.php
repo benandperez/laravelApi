@@ -22,6 +22,17 @@ class TicketApiController extends Controller
         return response()->json(['tickets' => $tickets], 200);
     }
 
+    public function show($id)
+    {
+        $ticket = $this->ticketRepository->findTicketById($id);
+
+        if ($ticket) {
+            return response()->json(['ticket' => $ticket], 200);
+        } else {
+            return response()->json(['message' => 'Ticket not found'], 404);
+        }
+    }
+
     public function store(Request $request)
     {
         $data = $request->all();

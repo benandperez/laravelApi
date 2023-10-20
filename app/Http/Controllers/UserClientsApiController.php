@@ -22,6 +22,17 @@ class UserClientsApiController extends Controller
         return response()->json(['UserClients' => $UserClients], 200);
     }
 
+    public function show($id)
+    {
+        $userClients = $this->UserClientRepository->findUserById($id);
+
+        if ($userClients) {
+            return response()->json(['userClients' => $userClients], 200);
+        } else {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+    }
+
     public function store(Request $request)
     {
         $data = $request->all();

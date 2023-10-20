@@ -4,6 +4,7 @@
 namespace App\Repositories;
 
 
+use App\Models\User;
 use App\Models\UserClients;
 
 class UserClientsRepository
@@ -24,6 +25,12 @@ class UserClientsRepository
         }
 
         return $query->paginate(10); // Puedes ajustar el número de elementos por página según tus necesidades
+    }
+
+    public function findUserById($id)
+    {
+
+        return UserClients::find($id);
     }
 
     public function store(array $data)

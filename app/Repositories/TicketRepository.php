@@ -27,6 +27,11 @@ class TicketRepository
         return $query->paginate(10); // Puedes ajustar el número de elementos por página según tus necesidades
     }
 
+    public function findTicketById($id)
+    {
+        return Ticket::find($id);
+    }
+
     public function store(array $data)
     {
         return $this->model->create($data);
