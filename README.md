@@ -41,6 +41,9 @@ Asegúrate de tener las siguientes herramientas instaladas antes de ejecutar la 
    - php artisan serve
 8. Crear usuarios por defecto para que la App Funcione mejor:
    - php artisan db:seed --class=UserClientSeeder
+9. ejecutar estos dos comandos de node si es necesario:
+    - npm install
+    - npm run dev
 
 
 La aplicación estará disponible por defecto en http://127.0.0.1:8000.
