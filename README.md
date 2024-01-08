@@ -61,13 +61,6 @@ si quieres ver todas las rutas del sistema lo puedes hacer con 'php artisan rout
 - PUT /api/userClientsApi/{id}: Actualiza un Usuario existente.
 - DELETE /api/userClientsApi/{id}: Elimina un Usuario existente
 
-
-- POST /api/ticketsApi: Crea un nuevo ticket.
-- GET /api/ticketsApi: Recupera todos los tickets con opciones de paginación.
-- GET /api/ticketsApi/{id}: Recupera un ticket específico por su ID.
-- PUT /api/ticketsApi/{id}: Actualiza un ticket existente.
-- DELETE /api/ticketsApi/{id}: Elimina un ticket existente.
-
 Asegúrate de incluir los datos necesarios en las solicitudes (por ejemplo, usuario y estatus) 
 según la ruta que estés utilizando, de todas formas, en el archivo estan con ejemplos.
 
